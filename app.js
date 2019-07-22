@@ -457,3 +457,24 @@ Empty list is considered to have zero greatest sum. Note that the empty list or 
     
     return max
   } */
+
+  // ---------------------------------------------------------------------------------------------------------------------------------------
+
+/* Given an array of numbers (a list in groovy), determine whether the sum of all of the numbers is odd or even.
+
+Give your answer in string format as 'odd' or 'even'. */
+
+/* function oddOrEven(arr) {
+  //enter code here
+  var sum = arr.reduce(((prev, cur) => prev + cur), 0)
+ if (arr === []) arr = [0]
+ if (sum % 2 === 0) {
+   return "even"
+ } else {
+   return "odd"
+ }
+}
+
+function oddOrEven(arr) {
+  return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+} */
