@@ -458,7 +458,7 @@ Empty list is considered to have zero greatest sum. Note that the empty list or 
     return max
   } */
 
-  // ---------------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------------
 
 /* Given an array of numbers (a list in groovy), determine whether the sum of all of the numbers is odd or even.
 
@@ -477,4 +477,54 @@ Give your answer in string format as 'odd' or 'even'. */
 
 function oddOrEven(arr) {
   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+} */
+
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+/* Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string). */
+
+/* function solution(str, ending){
+  return ending === str.substr(str.length - ending.length) ? true : false;
+} */
+
+/* function solution(str, ending){
+  return str.endsWith(ending);
+} */
+
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+/* Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+The binary number returned should be a string. */
+
+/* function addBinary(a,b) {
+  return (a + b).toString(2)
+} */
+
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+// Shortest steps to a number
+
+/* function shortestStepsToNum(num) {
+
+  if (num < 3)
+    return num - 1;
+    
+  let next = num % 2 ? num - 1 : num / 2;
+
+  return 1 + shortestStepsToNum(next);
+    
+}
+
+function shortestStepsToNum(num) {
+  // work backwards. unless you're not trying
+  var ticks = 0;
+  while (num > 1)
+    num % 2 == 0 ? num /= 2 : num--, ticks++;
+  return ticks
+}
+
+function shortestStepsToNum(num) {
+  const bin = num.toString(2).substr(1);
+  return bin.length + (bin.match(/1/g) || []).length;
 } */
